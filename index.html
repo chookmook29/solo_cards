@@ -4,14 +4,21 @@
 	<title>Solo Cards</title>
 </head>
 <body>
-	<button onclick="check()">Check</button>
-	<p id="result"></p>
+	<button onclick="check_g()">Check</button>
+	<p id="result_g">Result</p>
+	<button onclick="check_s()">Check</button>
+	<p id="result_s">Result</p>
+
 <script type="text/javascript">
-	var array = ["Attack x2 Kharkov Draw 1 Lose 2", "Attack x4 Major Attack Draw 1 Counterblow 2"];
-	var else_array = ["No Orders Draw 4L3", "" ];
-	function check(){
-		var result = array[Math.floor(Math.random()*array.length)];
-		document.getElementById("result").innerHTML = result;
+	var array_german_initiative = ["A2 Kharkov D1L2 ", "A2 Leningrad D2L1 ", "A2 Rostov D2L2", "A2 Moscow D2L2", "A4 Major D1C2 ", "A3 Moscow D2C2", "A3 Stalingrad D2C2", "A3 Moscow D2C2", "EZOCs D2L1", "DNA D2C3", "EZOCs D2L1 ", "A1 City Capture D2L2", "No Orders D3L3"];
+	var array_soviet_initiative = ["ELSE&rarr; NO D4L3","&larr;ELSE A3 Kharkov D2L1"," &larr;ELSE&rarr; A2 Bucharest D1L1", " &larr;ELSE&rarr; A2 Bucharest D1L1", " &larr;ELSE A3 Warsaw D1C3", " ELSE&rarr; A5 MA D1C1", " &larr;ELSE&rarr; A3 Kiev D2C1", "&larr;ELSE A2 Smolensk D2L2", "&larr;ELSE A3 Dnepropetrovsk D1C3", "&larr;ELSE&rarr; A2 Budapest D1L2", "&larr;ELSE A2 Stalino D1L1", "ELSE&rarr; DNA D2C4", "&larr;ELSE 3A Minsk D2C1" ];	
+	function check_g(){
+		var result_g = array_german_initiative[Math.floor(Math.random()*array_german_initiative.length)];
+		document.getElementById("result_g").innerHTML = result_g;
+	}
+	function check_s(){
+		var result_s = array_soviet_initiative[Math.floor(Math.random()*array_soviet_initiative.length)];
+		document.getElementById("result_s").innerHTML = result_s;
 	}
 </script>
 </body>
